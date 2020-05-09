@@ -1,0 +1,13 @@
+spring:
+  main:
+    lazy-initialization: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+book:
+  title: Cloud-Native Java
