@@ -88,13 +88,6 @@
 
 	</dependencies>
 
-	<repositories>
-		<repository>
-			<id>truemoney-group</id>
-			<name>Internal TrueMoney package releases</name>
-			<url>https://nexus.tmn-dev.com/nexus/content/groups/truemoney-group/</url>
-		</repository>
-	</repositories>
 
 	<build>
 		<plugins>
