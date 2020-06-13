@@ -2,12 +2,16 @@ spring:
   main:
     lazy-initialization: true
 
-
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-
+      base-path: /hello
 book:
   title: Cloud-Native Java
+logging:
+  level:
+    root: info
+  pattern:
+    console: '%d{yyyy-MM-dd''T''HH:mm:ss.SXXX}|2|%level|${spring.application.name:-}|%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-},%X{Correlation-ID}|${PID:-}|%thread|%logger{40}|%message%n'

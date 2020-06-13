@@ -19,18 +19,24 @@ public class BookService {
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
-    public List<Book> listAllBook(){
-        return StreamSupport.stream(bookRepository.findAll().spliterator(),false).collect(Collectors.toList());
+
+    public List<Book> listAllBook() {
+        return StreamSupport.stream(bookRepository.findAll().spliterator(), false).collect(Collectors.toList());
     }
-    public Optional<Book> findBookByAuthor(String author){
+
+    public Optional<Book> findBookByAuthor(String author) {
         return bookRepository.findBookByAuthor(author);
     }
 
-    public Optional<Book> findBookById(int id){
+    public Optional<Book> findBookById(int id) {
         return bookRepository.findById(id);
     }
-    public void saveBook(Book book){
+
+    public void saveBook(Book book) {
 
         log.info("Save....");
+    }
+    public void printBookAsync(String snb){
+        bookRepository.findBookBySnb(snb).thenAcceptAsync(System.out::println);
     }
 }

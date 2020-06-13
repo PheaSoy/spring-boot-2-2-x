@@ -74,7 +74,27 @@
 <!--				</exclusion>-->
 <!--			</exclusions>-->
 		</dependency>
+
+		<dependency>
+			<groupId>com.ascendcorp.monitoring</groupId>
+			<artifactId>ReconfigureActuator</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>truemoney-group</id>
+			<name>Internal TrueMoney package releases</name>
+			<url>https://nexus.tmn-dev.com/nexus/content/groups/truemoney-group/</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>

@@ -31,6 +31,5 @@ public class BookController {
     public Book findBookByAuthor(@PathVariable("author") String author) {
         return bookService.findBookByAuthor(author).orElseThrow(
                 () -> new BookNotFoundException(String.format("Can not find book with author:%s", author)));
-
     }
 }
